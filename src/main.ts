@@ -13,6 +13,21 @@ import { renderEventFeed, updateEventFeed } from './components/EventFeed';
 import { renderAnalytics } from './components/Analytics';
 import { renderPersonalHub } from './components/PersonalHub';
 import { registerRoute, initRouter } from './utils/router';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Initialize Google Services Integration
+const firebaseConfig = {
+  apiKey: "AIzaSyDummyKeyForHackathonPlaceholder",
+  authDomain: "stadiumsync-demo.firebaseapp.com",
+  projectId: "stadiumsync-demo",
+  storageBucket: "stadiumsync-demo.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abcdef123456"
+};
+const firebaseApp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseApp);
+
 
 // --- App State ---
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
