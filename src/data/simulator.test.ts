@@ -24,11 +24,12 @@ describe('Real-Time Data Simulation Engine', () => {
     startSimulation(1000);
     expect(stateRef).toBeDefined();
     if (stateRef) {
-      expect(stateRef!.totalAttendance).toBeLessThanOrEqual(stadiumConfig.totalCapacity);
-      expect(stateRef!.zones.length).toBeGreaterThan(0);
-      expect(stateRef!.facilities.length).toBeGreaterThan(0);
-      expect(stateRef!.gates.length).toBeGreaterThan(0);
-      expect(stateRef!.alerts.length).toBe(3);
+      const state = stateRef as SimulationState;
+      expect(state.totalAttendance).toBeLessThanOrEqual(stadiumConfig.totalCapacity);
+      expect(state.zones.length).toBeGreaterThan(0);
+      expect(state.facilities.length).toBeGreaterThan(0);
+      expect(state.gates.length).toBeGreaterThan(0);
+      expect(state.alerts.length).toBe(3);
     }
   });
 

@@ -16,7 +16,7 @@ export function initGoogleMaps(): void {
 
   (loader as any).importLibrary("maps").then(() => {
     console.log("[Google Services] Google Maps Module Initialized.");
-  }).catch((e) => {
+  }).catch((e: any) => {
     // Expected on local demo with dummy key
     console.error("[Google Services] Google Maps Init failed (expected with dummy key).");
   });

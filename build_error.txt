@@ -1,0 +1,10 @@
+﻿
+> for-promptwars@0.0.0 build
+> tsc && vite build
+
+src/data/simulator.test.ts(27,24): error TS2339: Property 'totalAttendance' does not exist on type 'never'.
+src/data/simulator.test.ts(28,24): error TS2339: Property 'zones' does not exist on type 'never'.
+src/data/simulator.test.ts(29,24): error TS2339: Property 'facilities' does not exist on type 'never'.
+src/data/simulator.test.ts(30,24): error TS2339: Property 'gates' does not exist on type 'never'.
+src/data/simulator.test.ts(31,24): error TS2339: Property 'alerts' does not exist on type 'never'.
+src/utils/maps.ts(19,13): error TS7006: Parameter 'e' implicitly has an 'any' type.
