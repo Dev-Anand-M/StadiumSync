@@ -11,18 +11,18 @@ export function renderAnalytics(container: HTMLElement, state: SimulationState):
   const utilization = Math.round((state.totalAttendance / totalCap) * 100);
 
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">📊 Analytics Dashboard</h2>
         <p class="section-desc">Crowd flow patterns, predictions, and venue insights</p>
       </div>
-      <div style="display: flex; gap: 8px;">
+      <div style="display: flex; gap: 8px;" aria-live="polite">
         <span class="badge badge-primary">Real-Time Analytics</span>
       </div>
-    </div>
+    </header>
 
     <!-- Top Stats -->
-    <div class="stats-grid">
+    <section class="stats-grid" aria-live="polite">
       <div class="stat-card" style="--stat-color: var(--color-primary);">
         <div class="stat-icon" style="background: rgba(108, 92, 231, 0.12); color: var(--color-primary-light);">🏟️</div>
         <div class="stat-value">${utilization}%</div>
@@ -49,70 +49,90 @@ export function renderAnalytics(container: HTMLElement, state: SimulationState):
         <div class="stat-label">Avg Queue Wait</div>
         <div class="stat-trend ${getAvgWait(state) > 10 ? 'down' : 'up'}">${getAvgWait(state) > 10 ? '↑ Above normal' : '↓ Below normal'}</div>
       </div>
-    </div>
+    </section>
 
     <div class="grid-2" style="margin-bottom: 20px;">
       <!-- Crowd Flow Prediction Chart -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">📈 Crowd Flow Predictions</span>
-          <div class="tabs" style="transform: scale(0.85); transform-origin: right;">
-            <button class="tab active">Concourse</button>
-            <button class="tab">Food</button>
-            <button class="tab">Exit</button>
-          </div>
-        </div>
+      <article class="card">
+        <header class="card-header">
+          <span class="card-title" role="heading" aria-level="3">📈 Crowd Flow Predictions</span>
+          <nav class="tabs" style="transform: scale(0.85); transform-origin: right;" aria-label="Prediction Scope">
+            <button class="tab active" aria-pressed="true">Concourse</button>
+            <button class="tab" aria-pressed="false">Food</button>
+            <button class="tab" aria-pressed="false">Exit</button>
+          </nav>
+        </header>
         <div class="card-body">
           <div class="chart-container" style="height: 220px;">
             ${renderBarChart(crowdFlowPredictions)}
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Capacity Donut -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">🎯 Zone Capacity Overview</span>
-        </div>
+      <article class="card">
+        <header class="card-header">
+          <span class="card-title" role="heading" aria-level="3">🎯 Zone Capacity Overview</span>
+        </header>
         <div class="card-body">
           <div style="display: flex; align-items: center; gap: 32px;">
-            <div class="donut-container">
+            <div class="donut-container" aria-hidden="true">
               ${renderDonutChart(utilization)}
               <div class="donut-center-text">
                 <div class="donut-value">${utilization}%</div>
                 <div class="donut-label">Capacity</div>
               </div>
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;" aria-live="polite">
               ${renderCapacityBreakdown(state)}
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
 
     <div class="grid-2">
       <!-- Heatmap Summary Table -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">🔥 Section Heatmap Summary</span>
-        </div>
+      <article class="card">
+        <header class="card-header">
+          <span class="card-title" role="heading" aria-level="3">🔥 Section Heatmap Summary</span>
+        </header>
         <div class="card-body">
           ${renderHeatmapTable(state)}
         </div>
-      </div>
+      </article>
 
-      <!-- Facility Performance -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">⭐ Facility Performance</span>
-        </div>
-        <div class="card-body">
-          ${renderFacilityPerformance(state)}
-        </div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- AI Inference -->
+        <article class="card">
+          <header class="card-header">
+            <span class="card-title" role="heading" aria-level="3">✨ Gemini AI Insights</span>
+          </header>
+          <div class="card-body" id="gemini-insight-box" aria-live="polite">
+            <span style="color: var(--color-text-secondary);">Analyzing live stadium telemetry...</span>
+          </div>
+        </article>
+
+        <!-- Facility Performance -->
+        <article class="card">
+          <header class="card-header">
+            <span class="card-title" role="heading" aria-level="3">⭐ Facility Performance</span>
+          </header>
+          <div class="card-body">
+            ${renderFacilityPerformance(state)}
+          </div>
+        </article>
       </div>
     </div>
   `;
+
+  setTimeout(async () => {
+    const box = document.getElementById('gemini-insight-box');
+    if (box) {
+      const { getGeminiInsight } = await import('../utils/ai');
+      box.innerHTML = await getGeminiInsight(state);
+    }
+  }, 50);
 }
 
 function getConcourseTraffic(state: SimulationState): string {

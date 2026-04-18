@@ -9,40 +9,40 @@ let activeFilter = 'all';
 
 export function renderQueueDashboard(container: HTMLElement, state: SimulationState): void {
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">⏱️ Smart Queue Dashboard</h2>
         <p class="section-desc">Real-time wait times with AI-predicted optimal visit windows</p>
       </div>
-      <div class="tabs" id="queue-filter-tabs">
-        <button class="tab ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">All</button>
-        <button class="tab ${activeFilter === 'food' ? 'active' : ''}" data-filter="food">🍔 Food</button>
-        <button class="tab ${activeFilter === 'restroom' ? 'active' : ''}" data-filter="restroom">🚻 Restrooms</button>
-        <button class="tab ${activeFilter === 'merchandise' ? 'active' : ''}" data-filter="merchandise">🏪 Merch</button>
-        <button class="tab ${activeFilter === 'bar' ? 'active' : ''}" data-filter="bar">🍺 Bars</button>
-      </div>
-    </div>
+      <nav class="tabs" id="queue-filter-tabs" aria-label="Facility Categories">
+        <button class="tab ${activeFilter === 'all' ? 'active' : ''}" data-filter="all" aria-pressed="${activeFilter === 'all'}">All</button>
+        <button class="tab ${activeFilter === 'food' ? 'active' : ''}" data-filter="food" aria-pressed="${activeFilter === 'food'}">🍔 Food</button>
+        <button class="tab ${activeFilter === 'restroom' ? 'active' : ''}" data-filter="restroom" aria-pressed="${activeFilter === 'restroom'}">🚻 Restrooms</button>
+        <button class="tab ${activeFilter === 'merchandise' ? 'active' : ''}" data-filter="merchandise" aria-pressed="${activeFilter === 'merchandise'}">🏪 Merch</button>
+        <button class="tab ${activeFilter === 'bar' ? 'active' : ''}" data-filter="bar" aria-pressed="${activeFilter === 'bar'}">🍺 Bars</button>
+      </nav>
+    </header>
 
     <!-- Quick Stats -->
-    <div class="stats-grid" style="margin-bottom: 20px;">
+    <section class="stats-grid" style="margin-bottom: 20px;" aria-live="polite">
       ${renderQueueStats(state)}
-    </div>
+    </section>
 
     <!-- Queue Cards Grid -->
-    <div class="grid-3" id="queue-cards-grid">
+    <section class="grid-3" id="queue-cards-grid" aria-live="polite">
       ${renderQueueCards(state)}
-    </div>
+    </section>
 
     <!-- AI Recommendation -->
-    <div class="card" style="margin-top: 20px;">
-      <div class="card-header">
-        <span class="card-title">🤖 AI Recommendations</span>
+    <article class="card" style="margin-top: 20px;">
+      <header class="card-header">
+        <span class="card-title" role="heading" aria-level="3">🤖 AI Recommendations</span>
         <span class="badge badge-primary">Powered by StadiumSync AI</span>
-      </div>
+      </header>
       <div class="card-body">
         ${renderRecommendations(state)}
       </div>
-    </div>
+    </article>
   `;
 
   attachQueueListeners(container, state);

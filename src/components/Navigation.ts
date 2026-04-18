@@ -29,21 +29,21 @@ let selectedDest: Destination | null = null;
 
 export function renderNavigation(container: HTMLElement, state: SimulationState): void {
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">🧭 Smart Navigation</h2>
         <p class="section-desc">AI-optimized routing that avoids congested paths in real-time</p>
       </div>
-    </div>
+    </header>
 
     <div class="grid-2-1">
       <!-- Main Navigation Panel -->
-      <div>
+      <section aria-label="Route Selection">
         <!-- Route Planner -->
-        <div class="card" style="margin-bottom: 20px;">
-          <div class="card-header">
-            <span class="card-title">📍 Route Planner</span>
-          </div>
+        <article class="card" style="margin-bottom: 20px;">
+          <header class="card-header">
+            <span class="card-title" role="heading" aria-level="3">📍 Route Planner</span>
+          </header>
           <div class="card-body">
             <div style="display: flex; gap: 12px; margin-bottom: 20px;">
               <div style="flex: 1;">
@@ -65,19 +65,19 @@ export function renderNavigation(container: HTMLElement, state: SimulationState)
 
             ${selectedDest ? renderRoute(selectedDest, state) : renderDestinationPicker()}
           </div>
-        </div>
+        </article>
 
         <!-- Route Visualization -->
         ${selectedDest ? renderRouteMap(selectedDest, state) : ''}
-      </div>
+      </section>
 
       <!-- Quick Destinations Panel -->
-      <div>
-        <div class="card" style="margin-bottom: 20px;">
-          <div class="card-header">
-            <span class="card-title">⚡ Quick Navigate</span>
-          </div>
-          <div class="card-body" style="display: flex; flex-direction: column; gap: 8px;">
+      <aside aria-label="Quick Links">
+        <article class="card" style="margin-bottom: 20px;">
+          <header class="card-header">
+            <span class="card-title" role="heading" aria-level="3">⚡ Quick Navigate</span>
+          </header>
+          <nav class="card-body" style="display: flex; flex-direction: column; gap: 8px;" aria-label="Quick Nav List">
             ${destinations.slice(0, 8).map(dest => `
               <div class="nav-quick-dest" data-dest-id="${dest.id}" style="
                 display: flex; align-items: center; gap: 12px; padding: 10px 12px;
@@ -93,13 +93,13 @@ export function renderNavigation(container: HTMLElement, state: SimulationState)
                 <span style="font-size: 12px; color: var(--color-text-tertiary);">${getEstWalkTime(dest)} min</span>
               </div>
             `).join('')}
-          </div>
-        </div>
+          </nav>
+        </article>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">💡 Navigation Tips</span>
-          </div>
+        <article class="card">
+          <header class="card-header">
+            <span class="card-title" role="heading" aria-level="3">💡 Navigation Tips</span>
+          </header>
           <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;">
             <div style="padding: 10px; background: rgba(0, 210, 160, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-success);">
               <div style="font-size: 12px; font-weight: 600; color: var(--color-success);">Least Crowded Path</div>
@@ -114,8 +114,8 @@ export function renderNavigation(container: HTMLElement, state: SimulationState)
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Gate S1 is recommended for fastest exit after the match.</div>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </aside>
     </div>
   `;
 

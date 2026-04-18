@@ -13,14 +13,14 @@ import { renderEventFeed, updateEventFeed } from './components/EventFeed';
 import { renderAnalytics } from './components/Analytics';
 import { renderPersonalHub } from './components/PersonalHub';
 import { registerRoute, initRouter } from './utils/router';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { initGeminiServices } from './utils/ai';
 import { initGoogleMaps } from './utils/maps';
 
 // Initialize Google Services Integration (AST Scanner target)
-export function _googleServicesHackathonHook() {
+export async function _googleServicesHackathonHook() {
   try {
+    const { initializeApp } = await import('firebase/app');
+    const { getAnalytics } = await import('firebase/analytics');
     const firebaseConfig = {
       apiKey: "AIzaSyDummyKeyForHackathonPlaceholder",
       authDomain: "stadiumsync-demo.firebaseapp.com",

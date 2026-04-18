@@ -9,20 +9,20 @@ let tooltipEl: HTMLElement | null = null;
 
 export function renderStadiumMap(container: HTMLElement, state: SimulationState): void {
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">🗺️ Live Stadium Map</h2>
         <p class="section-desc">Real-time crowd density visualization — ${stadiumConfig.name}</p>
       </div>
-      <div style="display: flex; gap: 8px; align-items: center;">
+      <div style="display: flex; gap: 8px; align-items: center;" aria-live="polite">
         <span class="badge badge-success">● LIVE</span>
         <span class="badge badge-primary">${state.totalAttendance.toLocaleString()} / ${stadiumConfig.totalCapacity.toLocaleString()}</span>
       </div>
-    </div>
-    <div class="card" style="overflow: visible;">
+    </header>
+    <section class="card" aria-label="Stadium Floorplan" style="overflow: visible;">
       <div class="stadium-map-container" id="stadium-map-svg-container">
         ${generateStadiumSVG(state)}
-        <div class="map-legend">
+        <div class="map-legend" aria-hidden="true">
           <span style="font-size: 11px; color: var(--color-text-secondary);">Crowd Density:</span>
           <span style="font-size: 10px; color: var(--heat-low);">Low</span>
           <div class="legend-gradient"></div>
@@ -30,25 +30,25 @@ export function renderStadiumMap(container: HTMLElement, state: SimulationState)
         </div>
         <div class="map-tooltip" id="map-tooltip"></div>
       </div>
-    </div>
+    </section>
 
     <div class="grid-2" style="margin-top: 20px;">
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">🚪 Gate Status</span>
-        </div>
-        <div class="card-body">
+      <article class="card">
+        <header class="card-header">
+          <span class="card-title" role="heading" aria-level="3">🚪 Gate Status</span>
+        </header>
+        <div class="card-body" aria-live="polite">
           ${renderGateStatus(state)}
         </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">📊 Section Occupancy</span>
-        </div>
-        <div class="card-body">
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <span class="card-title" role="heading" aria-level="3">📊 Section Occupancy</span>
+        </header>
+        <div class="card-body" aria-live="polite">
           ${renderSectionOccupancy(state)}
         </div>
-      </div>
+      </article>
     </div>
   `;
 
