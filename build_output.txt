@@ -1,0 +1,14 @@
+﻿
+> for-promptwars@0.0.0 build
+> tsc && vite build
+
+[36mvite v8.0.8 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...Γ£ô 15 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  1.12 kB Γöé gzip:  0.57 kB
+dist/assets/index-wrq0zjik.css  23.76 kB Γöé gzip:  4.68 kB
+dist/assets/index-CjHal1FB.js   86.49 kB Γöé gzip: 19.46 kB
+
+[32mΓ£ô built in 1.41s[39m

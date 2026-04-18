@@ -1,0 +1,4 @@
+﻿src/components/Navigation.ts(6,1): error TS6133: 'stadiumConfig' is declared but its value is never read.
+src/components/Navigation.ts(157,41): error TS6133: 'state' is declared but its value is never read.
+src/main.ts(15,25): error TS6133: 'navigate' is declared but its value is never read.
+src/main.ts(18,5): error TS6133: 'currentPage' is declared but its value is never read.

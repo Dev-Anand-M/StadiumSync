@@ -1,0 +1,10 @@
+# This file specifies files ignored during Cloud Run source deployment
+.git
+.gitignore
+node_modules
+dist
+*.md
+tsc_errors.txt
+build_output.txt
+.vscode
+.idea
