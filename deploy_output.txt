@@ -1,0 +1,92 @@
+﻿python.exe : ERROR: 
+Permission denied while 
+accessing Artifact 
+Registry. Artifact 
+Registry access is 
+required to deploy from 
+source.
+At C:\Program Files 
+(x86)\Google\Cloud SDK\g
+oogle-cloud-sdk\bin\gclo
+ud.ps1:114 char:3
++   & 
+"$cloudsdk_python" 
+$run_args_array
++   ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+    + CategoryInfo      
+        : NotSpecified: 
+(E    RROR: 
+Permissi...oy f    rom 
+source.:String) [    ], 
+RemoteException
+    + 
+FullyQualifiedError    
+Id : NativeCommandErr   
+ or
+ 
+ERROR: 
+(gcloud.run.deploy) 
+PERMISSION_DENIED: This 
+API method requires 
+billing to be enabled. 
+Please enable billing 
+on project #velvety-stud
+y-484316-k6 by visiting 
+https://console.develope
+rs.google.com/billing/en
+able?project=velvety-stu
+dy-484316-k6 then 
+retry. If you enabled 
+billing for this 
+project recently, wait 
+a few minutes for the 
+action to propagate to 
+our systems and retry. 
+This command is 
+authenticated as 
+p3ace.2.life@gmail.com 
+which is the active 
+account specified by 
+the [core/account] 
+property.
+This API method 
+requires billing to be 
+enabled. Please enable 
+billing on project #velv
+ety-study-484316-k6 by 
+visiting https://console
+.developers.google.com/b
+illing/enable?project=ve
+lvety-study-484316-k6 
+then retry. If you 
+enabled billing for 
+this project recently, 
+wait a few minutes for 
+the action to propagate 
+to our systems and 
+retry.
+Google developers 
+console billing
+https://console.develope
+rs.google.com/billing/en
+able?project=velvety-stu
+dy-484316-k6
+- '@type': type.googleap
+is.com/google.rpc.ErrorI
+nfo
+  domain: googleapis.com
+  metadata:
+    consoleUrl: https://
+console.developers.googl
+e.com/billing/enable?pro
+ject=velvety-study-48431
+6-k6
+    consumer: projects/v
+elvety-study-484316-k6
+    containerInfo: 
+velvety-study-484316-k6
+    service: artifactreg
+istry.googleapis.com
+  reason: 
+BILLING_DISABLED

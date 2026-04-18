@@ -45,8 +45,8 @@ function init() {
           <span class="nav-item-icon">⏱️</span>
           <span>Queue Times</span>
         </div>
-        <div class="nav-item" data-path="navigate">
-          <span class="nav-item-icon">🧭</span>
+        <div class="nav-item" data-path="navigate" role="button" aria-label="Navigate to Route Planner">
+          <span class="nav-item-icon" aria-hidden="true">🧭</span>
           <span>Navigate</span>
         </div>
         <div class="nav-item" data-path="events">
@@ -94,11 +94,11 @@ function init() {
             <span id="live-clock">${getCurrentTime()}</span>
           </div>
           <div class="header-weather">☀️ 28°C</div>
-          <button class="notification-btn" id="notification-btn">
+          <button class="notification-btn" id="notification-btn" aria-label="View notifications">
             🔔
-            <span class="badge" id="notif-count">3</span>
+            <span class="badge" id="notif-count" aria-hidden="true">3</span>
           </button>
-          <div class="user-avatar">P</div>
+          <div class="user-avatar" role="button" aria-label="User profile">P</div>
         </div>
       </header>
 
@@ -112,8 +112,8 @@ function init() {
     <div class="overlay" id="overlay"></div>
     <div class="notification-panel" id="notification-panel">
       <div class="notification-panel-header">
-        <span class="notification-panel-title">🔔 Notifications</span>
-        <button class="notification-close" id="notif-close">✕</button>
+        <span class="notification-panel-title" role="heading" aria-level="3">🔔 Notifications</span>
+        <button class="notification-close" id="notif-close" aria-label="Close notifications">✕</button>
       </div>
       <div class="notification-list" id="notification-list">
         <!-- Populated dynamically -->
