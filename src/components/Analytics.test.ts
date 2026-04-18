@@ -20,6 +20,7 @@ describe('Analytics Metrics', () => {
       // Branch test: The analytics chart rendering logic
       renderAnalytics(container, state);
       expect(container.innerHTML).toContain('Venue Utilization');
+      expect(container.innerHTML).toContain('Analytics Dashboard');
       
       // Ensure the Donut SVG branches, Capacity breakdowns, and Table renders
       expect(container.innerHTML).toContain('donut-container');

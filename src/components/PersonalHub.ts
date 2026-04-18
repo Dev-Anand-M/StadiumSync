@@ -7,12 +7,12 @@ import { stadiumConfig } from '../data/stadium';
 
 export function renderPersonalHub(container: HTMLElement, state: SimulationState): void {
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">🎫 Personal Hub</h2>
         <p class="section-desc">Your ticket, seat info, and personalized recommendations</p>
       </div>
-    </div>
+    </header>
 
     <div class="grid-2" style="margin-bottom: 20px;">
       <!-- Digital Ticket -->
@@ -92,43 +92,43 @@ export function renderPersonalHub(container: HTMLElement, state: SimulationState
     </div>
 
     <!-- Nearby Amenities -->
-    <div class="card" style="margin-bottom: 20px;">
-      <div class="card-header">
-        <span class="card-title">📍 Nearest Amenities to Your Seat</span>
+    <section class="card" aria-label="Nearby Amenities" style="margin-bottom: 20px;">
+      <header class="card-header">
+        <h3 class="card-title">📍 Nearest Amenities to Your Seat</h3>
         <span class="badge badge-primary">Section B, Row 14</span>
-      </div>
+      </header>
       <div class="card-body">
-        <div class="grid-3">
+        <div class="grid-3" role="list" aria-label="Nearest facilities">
           ${renderNearbyAmenities(state)}
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="grid-2">
       <!-- Personalized Recommendations -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">🤖 Personalized for You</span>
-        </div>
-        <div class="card-body" style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <span style="font-size: 28px;">🍔</span>
+      <article class="card">
+        <header class="card-header">
+          <h3 class="card-title">🤖 Personalized for You</h3>
+        </header>
+        <div class="card-body" style="display: flex; flex-direction: column; gap: 12px;" role="list" aria-label="Recommendations">
+          <div role="listitem" style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <span style="font-size: 28px;" aria-hidden="true">🍔</span>
             <div>
               <div style="font-size: 14px; font-weight: 600;">Pre-order Your Halftime Snack</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Skip the line! Pre-order from Main Food Court and pick up during the break.</div>
               <button class="btn btn-sm btn-primary" style="margin-top: 8px;">Pre-Order Now</button>
             </div>
           </div>
-          <div style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <span style="font-size: 28px;">🏃</span>
+          <div role="listitem" style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <span style="font-size: 28px;" aria-hidden="true">🏃</span>
             <div>
               <div style="font-size: 14px; font-weight: 600;">Best Time to Visit Restroom</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Based on predicted crowd flow, the best window is in ~8 minutes (during play).</div>
               <button class="btn btn-sm btn-secondary" style="margin-top: 8px;">Set Reminder</button>
             </div>
           </div>
-          <div style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-            <span style="font-size: 28px;">🚗</span>
+          <div role="listitem" style="display: flex; gap: 14px; padding: 14px; background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <span style="font-size: 28px;" aria-hidden="true">🚗</span>
             <div>
               <div style="font-size: 14px; font-weight: 600;">Exit Strategy Ready</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Gate S1 is your recommended exit. We'll alert you 5 min before match ends for fastest exit.</div>
@@ -136,17 +136,17 @@ export function renderPersonalHub(container: HTMLElement, state: SimulationState
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Event Memory Timeline -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">📸 Your Event Timeline</span>
-        </div>
-        <div class="card-body" style="display: flex; flex-direction: column; gap: 16px;">
+      <article class="card">
+        <header class="card-header">
+          <h3 class="card-title">📸 Your Event Timeline</h3>
+        </header>
+        <div class="card-body" style="display: flex; flex-direction: column; gap: 16px;" role="list" aria-label="Event timeline">
           ${renderTimeline()}
         </div>
-      </div>
+      </article>
     </div>
   `;
 }

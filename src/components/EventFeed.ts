@@ -10,60 +10,60 @@ export function renderEventFeed(container: HTMLElement, state: SimulationState):
   const unreadAlerts = state.alerts.filter(a => !a.read).length;
 
   container.innerHTML = `
-    <div class="section-header">
+    <header class="section-header">
       <div>
         <h2 class="section-title">📢 Live Event Feed</h2>
         <p class="section-desc">Match events, alerts, and real-time updates — ${stadiumConfig.event.homeTeam} vs ${stadiumConfig.event.awayTeam}</p>
       </div>
-      <div style="display: flex; gap: 8px;">
-        <span class="badge badge-success">● LIVE</span>
-        ${unreadAlerts > 0 ? `<span class="badge badge-danger">${unreadAlerts} new alerts</span>` : ''}
+      <div style="display: flex; gap: 8px;" aria-live="polite">
+        <span class="badge badge-success" role="status">● LIVE</span>
+        ${unreadAlerts > 0 ? `<span class="badge badge-danger" role="status">${unreadAlerts} new alerts</span>` : ''}
       </div>
-    </div>
+    </header>
 
     <!-- Live Score Banner -->
-    <div class="card" style="margin-bottom: 20px; overflow: visible;">
-      <div class="card-body" style="padding: 20px 28px;">
+    <section class="card" aria-label="Live Score" style="margin-bottom: 20px; overflow: visible;">
+      <div class="card-body" style="padding: 20px 28px;" aria-live="polite">
         ${renderScoreBanner()}
       </div>
-    </div>
+    </section>
 
     <div class="grid-2-1">
       <!-- Match Timeline -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">🏏 Match Timeline</span>
+      <article class="card">
+        <header class="card-header">
+          <h3 class="card-title">🏏 Match Timeline</h3>
           <span class="badge badge-primary">${matchEvents.length} events</span>
-        </div>
-        <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+        </header>
+        <div class="card-body" style="max-height: 500px; overflow-y: auto;" role="feed" aria-label="Match events">
           <div class="event-feed">
             ${matchEvents.slice().reverse().map(event => `
-              <div class="event-item" style="animation: fadeInUp 0.3s ease-out;">
+              <article class="event-item" style="animation: fadeInUp 0.3s ease-out;" aria-label="${event.title} at ${event.time}">
                 <div class="event-item-time">${event.time}</div>
-                <div class="event-item-dot" style="background: ${event.color};"></div>
+                <div class="event-item-dot" style="background: ${event.color};" aria-hidden="true"></div>
                 <div class="event-item-content">
-                  <div class="event-item-title">${event.icon} ${event.title}</div>
+                  <div class="event-item-title"><span aria-hidden="true">${event.icon}</span> ${event.title}</div>
                   <div class="event-item-desc">${event.description}</div>
                   <span class="event-item-tag" style="background: ${event.color}20; color: ${event.color};">${event.type}</span>
                 </div>
-              </div>
+              </article>
             `).join('')}
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Right Panel: Alerts + Upcoming -->
-      <div>
+      <aside aria-label="Alerts and Upcoming">
         <!-- Live Alerts -->
-        <div class="card" style="margin-bottom: 20px;">
-          <div class="card-header">
-            <span class="card-title">🔔 Live Alerts</span>
+        <article class="card" style="margin-bottom: 20px;">
+          <header class="card-header">
+            <h3 class="card-title">🔔 Live Alerts</h3>
             <span style="font-size: 12px; color: var(--color-text-tertiary);">${state.alerts.length} total</span>
-          </div>
-          <div class="card-body" style="max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;">
+          </header>
+          <div class="card-body" style="max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;" aria-live="polite" role="log">
             ${state.alerts.slice(0, 8).map(alert => `
-              <div style="display: flex; gap: 10px; padding: 10px; border-radius: var(--radius-sm); background: ${getAlertBg(alert.type)}; border: 1px solid ${getAlertBorder(alert.type)}; ${!alert.read ? 'box-shadow: inset 3px 0 0 ' + getAlertColor(alert.type) + ';' : ''}">
-                <span style="font-size: 16px; flex-shrink: 0;">${alert.icon}</span>
+              <div role="alert" style="display: flex; gap: 10px; padding: 10px; border-radius: var(--radius-sm); background: ${getAlertBg(alert.type)}; border: 1px solid ${getAlertBorder(alert.type)}; ${!alert.read ? 'box-shadow: inset 3px 0 0 ' + getAlertColor(alert.type) + ';' : ''}">
+                <span style="font-size: 16px; flex-shrink: 0;" aria-hidden="true">${alert.icon}</span>
                 <div style="flex: 1; min-width: 0;">
                   <div style="font-size: 12px; font-weight: 600; color: ${getAlertColor(alert.type)};">${alert.title}</div>
                   <div style="font-size: 11px; color: var(--color-text-secondary); margin-top: 2px;">${alert.message}</div>
@@ -73,17 +73,17 @@ export function renderEventFeed(container: HTMLElement, state: SimulationState):
             `).join('')}
             ${state.alerts.length === 0 ? '<div style="text-align: center; color: var(--color-text-tertiary); font-size: 13px; padding: 20px;">No alerts yet</div>' : ''}
           </div>
-        </div>
+        </article>
 
         <!-- Upcoming -->
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">📅 Coming Up</span>
-          </div>
-          <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;">
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">📅 Coming Up</h3>
+          </header>
+          <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;" role="list" aria-label="Upcoming activities">
             ${upcomingActivities.map(act => `
-              <div style="display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--color-border);">
-                <span style="font-size: 16px;">${act.icon}</span>
+              <div role="listitem" style="display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--color-border);">
+                <span style="font-size: 16px;" aria-hidden="true">${act.icon}</span>
                 <div style="flex: 1;">
                   <div style="font-size: 13px; font-weight: 500;">${act.title}</div>
                 </div>
@@ -91,8 +91,8 @@ export function renderEventFeed(container: HTMLElement, state: SimulationState):
               </div>
             `).join('')}
           </div>
-        </div>
-      </div>
+        </article>
+      </aside>
     </div>
   `;
 }

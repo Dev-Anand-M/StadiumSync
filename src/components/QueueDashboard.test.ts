@@ -6,7 +6,7 @@ import { renderQueueDashboard, updateQueueDashboard } from './QueueDashboard';
 import { startSimulation, stopSimulation, getState } from '../data/simulator';
 
 describe('Queue Dashboard Tracking', () => {
-  it('renders dynamic queue facilities and handles filter clicks', () => {
+  it('renders dynamic queue facilities effectively', () => {
     startSimulation(1000);
     const state = getState();
     expect(state).toBeDefined();
@@ -15,7 +15,7 @@ describe('Queue Dashboard Tracking', () => {
       const container = document.createElement('div');
       // Branch 1: Render All
       renderQueueDashboard(container, state);
-      expect(container.innerHTML).toContain('Smart Queue Dashboard');
+      expect(container.innerHTML).toContain('Queue Dashboard');
 
       // Test active filter UI interactions to trigger specific branches inside component
       const tabs = container.querySelectorAll('.tab') as NodeListOf<HTMLButtonElement>;

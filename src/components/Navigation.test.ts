@@ -6,7 +6,7 @@ import { renderNavigation } from './Navigation';
 import { startSimulation, stopSimulation, getState } from '../data/simulator';
 
 describe('Navigation Workflow', () => {
-  it('renders routing UI and processes destination calculation branches', () => {
+  it('renders routing UI without crashing', () => {
     startSimulation(1000);
     const state = getState();
     expect(state).toBeDefined();
@@ -17,6 +17,7 @@ describe('Navigation Workflow', () => {
       // Step 1: Base rendering without selected destination
       renderNavigation(container, state);
       expect(container.innerHTML).toContain('Route Planner');
+      expect(container.innerHTML).toContain('Smart Navigation');
 
       // Step 2: Trigger destination selection branch to execute pathfinding algorithms
       const buttons = container.querySelectorAll('.dest-pick-btn') as NodeListOf<HTMLButtonElement>;

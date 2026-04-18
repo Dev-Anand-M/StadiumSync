@@ -38,26 +38,26 @@ export function renderNavigation(container: HTMLElement, state: SimulationState)
 
     <div class="grid-2-1">
       <!-- Main Navigation Panel -->
-      <section aria-label="Route Selection">
+      <section aria-label="Route Selection" role="region">
         <!-- Route Planner -->
         <article class="card" style="margin-bottom: 20px;">
           <header class="card-header">
-            <span class="card-title" role="heading" aria-level="3">📍 Route Planner</span>
+            <h3 class="card-title" id="route-planner-heading">📍 Route Planner</h3>
           </header>
-          <div class="card-body">
+          <div class="card-body" role="form" aria-labelledby="route-planner-heading">
             <div style="display: flex; gap: 12px; margin-bottom: 20px;">
               <div style="flex: 1;">
-                <label style="font-size: 12px; color: var(--color-text-tertiary); display: block; margin-bottom: 6px;">FROM</label>
-                <div class="select-control">
-                  <span>🎫</span>
+                <label for="from-location" style="font-size: 12px; color: var(--color-text-tertiary); display: block; margin-bottom: 6px;">FROM</label>
+                <div class="select-control" id="from-location" role="button" tabindex="0" aria-label="Starting location: Your Seat, Section B, Row 14, Seat 23">
+                  <span aria-hidden="true">🎫</span>
                   <span>Your Seat — Section B, Row 14, Seat 23</span>
                 </div>
               </div>
-              <div style="display: flex; align-items: flex-end; padding-bottom: 6px; color: var(--color-text-tertiary); font-size: 20px;">→</div>
+              <div style="display: flex; align-items: flex-end; padding-bottom: 6px; color: var(--color-text-tertiary); font-size: 20px;" aria-hidden="true">→</div>
               <div style="flex: 1;">
-                <label style="font-size: 12px; color: var(--color-text-tertiary); display: block; margin-bottom: 6px;">TO</label>
-                <div class="select-control" id="dest-selector" style="cursor: pointer;">
-                  <span>${selectedDest ? selectedDest.icon : '📍'}</span>
+                <label for="dest-selector" style="font-size: 12px; color: var(--color-text-tertiary); display: block; margin-bottom: 6px;">TO</label>
+                <div class="select-control" id="dest-selector" style="cursor: pointer;" role="button" tabindex="0" aria-label="${selectedDest ? `Destination: ${selectedDest.name}` : 'Select destination'}">
+                  <span aria-hidden="true">${selectedDest ? selectedDest.icon : '📍'}</span>
                   <span>${selectedDest ? selectedDest.name : 'Select destination...'}</span>
                 </div>
               </div>
@@ -72,44 +72,46 @@ export function renderNavigation(container: HTMLElement, state: SimulationState)
       </section>
 
       <!-- Quick Destinations Panel -->
-      <aside aria-label="Quick Links">
+      <aside aria-label="Quick Navigation Links" role="complementary">
         <article class="card" style="margin-bottom: 20px;">
           <header class="card-header">
-            <span class="card-title" role="heading" aria-level="3">⚡ Quick Navigate</span>
+            <h3 class="card-title">⚡ Quick Navigate</h3>
           </header>
-          <nav class="card-body" style="display: flex; flex-direction: column; gap: 8px;" aria-label="Quick Nav List">
+          <nav class="card-body" style="display: flex; flex-direction: column; gap: 8px;" aria-label="Quick destination shortcuts">
             ${destinations.slice(0, 8).map(dest => `
-              <div class="nav-quick-dest" data-dest-id="${dest.id}" style="
+              <button class="nav-quick-dest" data-dest-id="${dest.id}" style="
                 display: flex; align-items: center; gap: 12px; padding: 10px 12px;
                 background: var(--color-bg-secondary); border-radius: var(--radius-md);
                 cursor: pointer; transition: all 0.15s; border: 1px solid transparent;
+                width: 100%; text-align: left;
               " onmouseover="this.style.borderColor='var(--color-border-active)'; this.style.background='rgba(108,92,231,0.08)'"
-                 onmouseout="this.style.borderColor='transparent'; this.style.background='var(--color-bg-secondary)'">
-                <span style="font-size: 18px;">${dest.icon}</span>
+                 onmouseout="this.style.borderColor='transparent'; this.style.background='var(--color-bg-secondary)'"
+                 aria-label="Navigate to ${dest.name}, ${dest.category}, estimated ${getEstWalkTime(dest)} minutes">
+                <span aria-hidden="true" style="font-size: 18px;">${dest.icon}</span>
                 <div style="flex: 1;">
                   <div style="font-size: 13px; font-weight: 500;">${dest.name}</div>
                   <div style="font-size: 11px; color: var(--color-text-tertiary);">${dest.category}</div>
                 </div>
-                <span style="font-size: 12px; color: var(--color-text-tertiary);">${getEstWalkTime(dest)} min</span>
-              </div>
+                <span style="font-size: 12px; color: var(--color-text-tertiary);" aria-label="${getEstWalkTime(dest)} minutes">${getEstWalkTime(dest)} min</span>
+              </button>
             `).join('')}
           </nav>
         </article>
 
         <article class="card">
           <header class="card-header">
-            <span class="card-title" role="heading" aria-level="3">💡 Navigation Tips</span>
+            <h3 class="card-title">💡 Navigation Tips</h3>
           </header>
-          <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="padding: 10px; background: rgba(0, 210, 160, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-success);">
+          <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;" role="list" aria-label="Navigation tips and alerts">
+            <div style="padding: 10px; background: rgba(0, 210, 160, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-success);" role="listitem">
               <div style="font-size: 12px; font-weight: 600; color: var(--color-success);">Least Crowded Path</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">West Concourse currently has 40% less foot traffic than East.</div>
             </div>
-            <div style="padding: 10px; background: rgba(251, 191, 36, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-warning);">
+            <div style="padding: 10px; background: rgba(251, 191, 36, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-warning);" role="listitem">
               <div style="font-size: 12px; font-weight: 600; color: var(--color-warning);">Congestion Alert</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">North Concourse near Gate N1 is congested. Use alternative routes.</div>
             </div>
-            <div style="padding: 10px; background: rgba(0, 206, 255, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);">
+            <div style="padding: 10px; background: rgba(0, 206, 255, 0.06); border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);" role="listitem">
               <div style="font-size: 12px; font-weight: 600; color: var(--color-accent);">Exit Planning</div>
               <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Gate S1 is recommended for fastest exit after the match.</div>
             </div>

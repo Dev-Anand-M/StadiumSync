@@ -6,7 +6,7 @@ import { renderStadiumMap, updateStadiumMap } from './StadiumMap';
 import { startSimulation, stopSimulation, getState } from '../data/simulator';
 
 describe('Stadium Map View Strategy', () => {
-  it('renders SVG zones and triggers tooltip interactions', () => {
+  it('renders SVG zones and layout effectively', () => {
     startSimulation(1000);
     const state = getState();
     expect(state).toBeDefined();
@@ -22,6 +22,7 @@ describe('Stadium Map View Strategy', () => {
       // Branch 1: SVG Layout construction
       renderStadiumMap(container, state);
       expect(container.innerHTML).toContain('svg');
+      expect(container.innerHTML).toContain('Stadium Map');
 
       // Branch 2: Mouse hover states
       const zoneNode = container.querySelector('.stadium-section');
