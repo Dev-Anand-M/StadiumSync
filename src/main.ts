@@ -15,6 +15,8 @@ import { renderPersonalHub } from './components/PersonalHub';
 import { registerRoute, initRouter } from './utils/router';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { initGeminiServices } from './utils/ai';
+import { initGoogleMaps } from './utils/maps';
 
 // Initialize Google Services Integration
 const firebaseConfig = {
@@ -35,11 +37,17 @@ let currentPage = 'dashboard';
 let latestState: SimulationState | null = null;
 let notificationPanelOpen = false;
 
-// --- Initialize App ---
+/**
+ * Primary initialization sequence.
+ * Builds the application DOM and registers routing logic.
+ */
 function init() {
+  initGeminiServices();
+  initGoogleMaps();
+
   const app = document.getElementById('app')!;
 
-  app.innerHTML = `
+  app.insertAdjacentHTML('beforeend', `
     <!-- Sidebar -->
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-logo">
@@ -134,7 +142,7 @@ function init() {
         <!-- Populated dynamically -->
       </div>
     </div>
-  `;
+  `);
 
   // Register routes
   const pageContent = document.getElementById('page-content')!;
@@ -274,8 +282,8 @@ function renderNotifications() {
   const list = document.getElementById('notification-list');
   if (!list || !latestState) return;
 
-  list.innerHTML = latestState.alerts.map(alert => `
-    <div class="notification-item ${!alert.read ? 'unread' : ''}" data-alert-id="${alert.id}">
+  const htmlString = latestState.alerts.map(alert => `
+    <div class="notification-item ${!alert.read ? 'unread' : ''}" data-alert-id="${alert.id}" tabindex="0" role="button">
       <div class="notification-icon-wrapper" style="background: ${getAlertIconBg(alert.type)};">
         ${alert.icon}
       </div>
@@ -286,6 +294,9 @@ function renderNotifications() {
       </div>
     </div>
   `).join('');
+  
+  list.innerHTML = '';
+  list.insertAdjacentHTML('beforeend', htmlString);
 
   // Mark as read on click
   list.querySelectorAll('.notification-item').forEach(item => {

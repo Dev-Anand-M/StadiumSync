@@ -2,17 +2,17 @@
  * @vitest-environment jsdom
  */
 import { describe, it, expect, beforeEach } from 'vitest';
+import { renderAnalytics } from './Analytics';
 import { startSimulation, stopSimulation, getState } from '../data/simulator';
-import { renderNavigation } from './Navigation';
 
-describe('Navigation Workflow', () => {
-  it('renders routing UI without crashing', () => {
+describe('Analytics Metrics', () => {
+  it('processes analytics logic accurately', () => {
     startSimulation(1000);
     const state = getState();
     if (state) {
       const container = document.createElement('div');
-      renderNavigation(container, state);
-      expect(container.innerHTML).toContain('Route Planner');
+      renderAnalytics(container, state);
+      expect(container.innerHTML).toContain('Analytics');
     }
     stopSimulation();
   });

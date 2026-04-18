@@ -5,11 +5,1889 @@
 
 [1m[30m[46m RUN [49m[39m[22m [36mv4.1.4 [39m[90mC:/Users/p3ace/OneDrive/Documents/For-PromptWars[39m
 
+ [32mΓ£ô[39m src/utils/router.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 17[2mms[22m[39m
  [32mΓ£ô[39m src/data/simulator.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
- [32mΓ£ô[39m src/utils/router.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [31mΓ¥»[39m src/components/QueueDashboard.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 7[2mms[22m[39m
+[31m     [31m├ù[31m renders dynamic queue facilities effectively[39m[32m 6[2mms[22m[39m
+ [31mΓ¥»[39m src/components/StadiumMap.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 86[2mms[22m[39m
+[31m     [31m├ù[31m renders SVG zones and layout effectively[39m[32m 85[2mms[22m[39m
+ [31mΓ¥»[39m src/components/Navigation.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 100[2mms[22m[39m
+[31m     [31m├ù[31m renders routing UI without crashing[39m[32m 98[2mms[22m[39m
+ [31mΓ¥»[39m src/components/Analytics.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 128[2mms[22m[39m
+[31m     [31m├ù[31m processes analytics logic accurately[39m[32m 126[2mms[22m[39m
+node.exe : 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (:  
+  String) [], RemoteExc   
+ eption
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+[39m[1m[41m Failed 
+Tests 4 [49m[22m[31mΓÄ»
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
 
-[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
-[2m      Tests [22m [1m[32m4 passed[39m[22m[90m (4)[39m
-[2m   Start at [22m 15:34:37
-[2m   Duration [22m 936ms[2m (transform 68ms, setup 0ms, import 94ms, tests 21ms, environment 1.46s)[22m
+[41m[1m FAIL [22m[49m 
+src/components/Analytics.t
+est.ts[2m > 
+[22mAnalytics 
+Metrics[2m > 
+[22mprocesses analytics 
+logic accurately
+[31m[1mAssertionError[2
+2m: expected '\n    <div 
+class="section-header">\n 
+ΓÇª' to contain 'Platform 
+Insights'[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- Platform 
+Insights[39m
+[31m+[39m
+[31m+     <div class="sec
+tion-header">[39m
+[31m+       <div>[39m
+[31m+         <h2 class="
+section-title">≡ƒôè 
+Analytics 
+Dashboard</h2>[39m
+[31m+         <p class="s
+ection-desc">Crowd flow 
+patterns, predictions, 
+and venue 
+insights</p>[39m
+[31m+       </div>[39m
+[31m+       <div 
+style="display: flex; 
+gap: 8px;">[39m
+[31m+         <span 
+class="badge 
+badge-primary">Real-Time 
+Analytics</span>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+[39m
+[31m+     <!-- Top Stats 
+-->[39m
+[31m+     <div 
+class="stats-grid">[39m
+[31m+       <div 
+class="stat-card" 
+style="--stat-color: var(-
+-color-primary);">[39m
+[31m+         <div 
+class="stat-icon" 
+style="background: 
+rgba(108, 92, 231, 0.12); 
+color: var(--color-primary
+-light);">≡ƒÅƒ∩╕Å</div>[3
+9m
+[31m+         <div class=
+"stat-value">77%</div>[39
+m
+[31m+         <div 
+class="stat-label">Venue 
+Utilization</div>[39m
+[31m+         <div 
+class="stat-trend up">Γ£ô 
+Comfortable</div>[39m
+[31m+       </div>[39m
+[31m+       <div 
+class="stat-card" 
+style="--stat-color: var(-
+-color-accent);">[39m
+[31m+         <div 
+class="stat-icon" 
+style="background: 
+rgba(0, 206, 255, 0.12); 
+color: var(--color-accent)
+;">≡ƒæÑ</div>[39m
+[31m+         <div class=
+"stat-value">50.0k</div>[
+39m
+[31m+         <div class=
+"stat-label">Current 
+Attendance</div>[39m
+[31m+         <div 
+class="stat-trend 
+up">[39m
+[31m+           Γåæ 
+Increasing[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+       <div 
+class="stat-card" 
+style="--stat-color: var(-
+-color-success);">[39m
+[31m+         <div 
+class="stat-icon" 
+style="background: 
+rgba(0, 210, 160, 0.12); 
+color: var(--color-success
+);">≡ƒÜ╢</div>[39m
+[31m+         <div class=
+"stat-value">0</div>[39m
+[31m+         <div class=
+"stat-label">Concourse 
+Traffic</div>[39m
+[31m+         <div 
+class="stat-trend 
+up">People in 
+transit</div>[39m
+[31m+       </div>[39m
+[31m+       <div 
+class="stat-card" 
+style="--stat-color: var(-
+-color-warning);">[39m
+[31m+         <div 
+class="stat-icon" 
+style="background: 
+rgba(251, 191, 36, 0.12); 
+color: var(--color-warning
+);">ΓÅ▒∩╕Å</div>[39m
+[31m+         <div class=
+"stat-value">NaN<span 
+style="font-size: 14px;"> 
+min</span></div>[39m
+[31m+         <div 
+class="stat-label">Avg 
+Queue Wait</div>[39m
+[31m+         <div 
+class="stat-trend up">Γåô 
+Below normal</div>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+[39m
+[31m+     <div 
+class="grid-2" 
+style="margin-bottom: 
+20px;">[39m
+[31m+       <!-- Crowd 
+Flow Prediction Chart 
+-->[39m
+[31m+       <div 
+class="card">[39m
+[31m+         <div 
+class="card-header">[39m
+[31m+           <span 
+class="card-title">≡ƒôê 
+Crowd Flow 
+Predictions</span>[39m
+[31m+           <div 
+class="tabs" 
+style="transform: 
+scale(0.85); 
+transform-origin: 
+right;">[39m
+[31m+             
+<button class="tab active"
+>Concourse</button>[39m
+[31m+             
+<button class="tab">Food</
+button>[39m
+[31m+             
+<button class="tab">Exit</
+button>[39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+         <div 
+class="card-body">[39m
+[31m+           <div 
+class="chart-container" 
+style="height: 
+220px;">[39m
+[31m+             [39m
+[31m+     <div 
+class="bar-chart">[39m
+[31m+       [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+11.11111111111111%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="10%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">14</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+27.77777777777778%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="25%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">15</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 50%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="45%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">17</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+72.22222222222221%; 
+background: 
+linear-gradient(180deg, 
+rgba(255,107,107,0.7), 
+rgba(255,107,107,0.3)); " 
+title="65%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">18</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+88.88888888888889%; 
+background: 
+linear-gradient(180deg, 
+rgba(255,107,107,0.7), 
+rgba(255,107,107,0.3)); " 
+title="80%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">19</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+33.33333333333333%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="30%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">19:30</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+22.22222222222222%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="20%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">20</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+61.111111111111114%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="55%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">20:45</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+83.33333333333334%; 
+background: 
+linear-gradient(180deg, 
+rgba(255,107,107,0.7), 
+rgba(255,107,107,0.3)); " 
+title="75%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">21:25</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+38.88888888888889%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="35%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">21:45</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+24.444444444444443%; 
+background: 
+linear-gradient(180deg, 
+var(--color-accent), 
+var(--color-primary)); 
+box-shadow: 0 0 12px var(-
+-color-accent-glow);" 
+title="22%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="color: 
+var(--color-accent); 
+font-weight: 
+700;">22</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+66.66666666666666%; 
+background: 
+linear-gradient(180deg, 
+rgba(108,92,231,0.6), 
+rgba(108,92,231,0.2)); " 
+title="60%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">22:45</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 
+88.88888888888889%; 
+background: 
+linear-gradient(180deg, 
+rgba(255,107,107,0.7), 
+rgba(255,107,107,0.3)); " 
+title="80%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">23</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+           <div 
+class="bar-item">[39m
+[31m+             <div 
+class="bar" 
+style="height: 100%; 
+background: 
+linear-gradient(180deg, 
+rgba(255,107,107,0.7), 
+rgba(255,107,107,0.3)); " 
+title="90%"></div>[39m
+[31m+             <span 
+class="bar-label" 
+style="">23:30</span>[39m
+[31m+           
+</div>[39m
+[31m+         [39m
+[31m+     </div>[39m
+[31m+   [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+[39m
+[31m+       <!-- 
+Capacity Donut -->[39m
+[31m+       <div 
+class="card">[39m
+[31m+         <div 
+class="card-header">[39m
+[31m+           <span 
+class="card-title">≡ƒÄ» 
+Zone Capacity 
+Overview</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+class="card-body">[39m
+[31m+           <div 
+style="display: flex; 
+align-items: center; gap: 
+32px;">[39m
+[31m+             <div cl
+ass="donut-container">[39
+m
+[31m+               [39m
+[31m+     <svg 
+width="160" height="160" 
+viewBox="0 0 160 
+160">[39m
+[31m+       <!-- 
+Background circle -->[39m
+[31m+       <circle 
+cx="80" cy="80" r="60" 
+fill="none" stroke="var(--
+color-bg-secondary)" strok
+e-width="14"></circle>[39
+m
+[31m+       <!-- 
+Progress circle -->[39m
+[31m+       <circle 
+cx="80" cy="80" r="60" 
+fill="none" 
+stroke="url(#donutGrad)" 
+stroke-width="14" stroke-d
+asharray="290.283161191696
+9 86.70795723907827" 
+stroke-linecap="round" 
+transform="rotate(-90 80 
+80)" style="transition: 
+stroke-dasharray 0.5s 
+ease;">[39m
+[31m+       
+</circle>[39m
+[31m+       <defs>[39m
+[31m+         
+<linearGradient 
+id="donutGrad" x1="0%" 
+y1="0%" x2="100%" 
+y2="100%">[39m
+[31m+           <stop 
+offset="0%" 
+style="stop-color: var(--c
+olor-primary)"></stop>[39
+m
+[31m+           <stop 
+offset="100%" 
+style="stop-color: var(--c
+olor-accent)"></stop>[39m
+[31m+         
+</linearGradient>[39m
+[31m+       </defs>[39m
+[31m+     </svg>[39m
+[31m+   [39m
+[31m+               <div 
+class="donut-center-text">
+[39m
+[31m+                 
+<div class="donut-value">7
+7%</div>[39m
+[31m+                 
+<div class="donut-label">C
+apacity</div>[39m
+[31m+               
+</div>[39m
+[31m+             
+</div>[39m
+[31m+             <div 
+style="flex: 1; display: 
+flex; flex-direction: 
+column; gap: 12px;">[39m
+[31m+               [39m
+[31m+       <div>[39m
+[31m+         <div 
+style="display: flex; 
+justify-content: 
+space-between; font-size: 
+12px; margin-bottom: 
+4px;">[39m
+[31m+           <span 
+style="color: var(--color-
+text-secondary);">Lower 
+Bowl</span>[39m
+[31m+           <span 
+style="font-weight: 600; 
+color: var(--color-primary
+);">0%</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+style="height: 4px; 
+background: var(--color-bg
+-secondary); 
+border-radius: 99px; 
+overflow: hidden;">[39m
+[31m+           <div 
+style="width: 0%; height: 
+100%; background: 
+var(--color-primary); 
+border-radius: 99px; 
+transition: width 
+0.5s;"></div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     [39m
+[31m+       <div>[39m
+[31m+         <div 
+style="display: flex; 
+justify-content: 
+space-between; font-size: 
+12px; margin-bottom: 
+4px;">[39m
+[31m+           <span 
+style="color: var(--color-
+text-secondary);">Upper 
+Bowl</span>[39m
+[31m+           <span 
+style="font-weight: 600; 
+color: var(--color-accent)
+;">0%</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+style="height: 4px; 
+background: var(--color-bg
+-secondary); 
+border-radius: 99px; 
+overflow: hidden;">[39m
+[31m+           <div 
+style="width: 0%; height: 
+100%; background: 
+var(--color-accent); 
+border-radius: 99px; 
+transition: width 
+0.5s;"></div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     [39m
+[31m+       <div>[39m
+[31m+         <div 
+style="display: flex; 
+justify-content: 
+space-between; font-size: 
+12px; margin-bottom: 
+4px;">[39m
+[31m+           <span 
+style="color: var(--color-
+text-secondary);">VIP 
+Areas</span>[39m
+[31m+           <span 
+style="font-weight: 600; 
+color: var(--color-warning
+);">0%</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+style="height: 4px; 
+background: var(--color-bg
+-secondary); 
+border-radius: 99px; 
+overflow: hidden;">[39m
+[31m+           <div 
+style="width: 0%; height: 
+100%; background: 
+var(--color-warning); 
+border-radius: 99px; 
+transition: width 
+0.5s;"></div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     [39m
+[31m+       <div>[39m
+[31m+         <div 
+style="display: flex; 
+justify-content: 
+space-between; font-size: 
+12px; margin-bottom: 
+4px;">[39m
+[31m+           <span 
+style="color: var(--color-
+text-secondary);">Concours
+es</span>[39m
+[31m+           <span 
+style="font-weight: 600; 
+color: var(--color-success
+);">0%</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+style="height: 4px; 
+background: var(--color-bg
+-secondary); 
+border-radius: 99px; 
+overflow: hidden;">[39m
+[31m+           <div 
+style="width: 0%; height: 
+100%; background: 
+var(--color-success); 
+border-radius: 99px; 
+transition: width 
+0.5s;"></div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     [39m
+[31m+             
+</div>[39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+[39m
+[31m+     <div 
+class="grid-2">[39m
+[31m+       <!-- Heatmap 
+Summary Table -->[39m
+[31m+       <div 
+class="card">[39m
+[31m+         <div 
+class="card-header">[39m
+[31m+           <span 
+class="card-title">≡ƒöÑ 
+Section Heatmap 
+Summary</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+class="card-body">[39m
+[31m+           [39m
+[31m+     <div 
+style="overflow-x: 
+auto;">[39m
+[31m+       <table 
+style="width: 100%; 
+border-collapse: 
+collapse; font-size: 
+13px;">[39m
+[31m+         
+<thead>[39m
+[31m+           <tr 
+style="border-bottom: 1px 
+solid var(--color-border);
+">[39m
+[31m+             <th 
+style="text-align: left; 
+padding: 8px 12px; color: 
+var(--color-text-tertiary)
+; font-weight: 600; 
+font-size: 11px; 
+text-transform: 
+uppercase; 
+letter-spacing: 
+0.5px;">Section</th>[39m
+[31m+             <th 
+style="text-align: left; 
+padding: 8px 12px; color: 
+var(--color-text-tertiary)
+; font-weight: 600; 
+font-size: 11px; 
+text-transform: 
+uppercase; 
+letter-spacing: 
+0.5px;">Level</th>[39m
+[31m+             <th 
+style="text-align: right; 
+padding: 8px 12px; color: 
+var(--color-text-tertiary)
+; font-weight: 600; 
+font-size: 11px; 
+text-transform: 
+uppercase; 
+letter-spacing: 0.5px;">Oc
+cupancy</th>[39m
+[31m+             <th 
+style="text-align: right; 
+padding: 8px 12px; color: 
+var(--color-text-tertiary)
+; font-weight: 600; 
+font-size: 11px; 
+text-transform: 
+uppercase; 
+letter-spacing: 
+0.5px;">Status</th>[39m
+[31m+           
+</tr>[39m
+[31m+         
+</thead>[39m
+[31m+         
+<tbody>[39m
+[31m+           [39m
+[31m+         
+</tbody>[39m
+[31m+       </table>[39m
+[31m+     </div>[39m
+[31m+   [39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+[39m
+[31m+       <!-- 
+Facility Performance 
+-->[39m
+[31m+       <div 
+class="card">[39m
+[31m+         <div 
+class="card-header">[39m
+[31m+           <span 
+class="card-title">Γ¡É 
+Facility 
+Performance</span>[39m
+[31m+         </div>[39m
+[31m+         <div 
+class="card-body">[39m
+[31m+           [39m
+[31m+     <div 
+style="display: flex; 
+flex-direction: column; 
+gap: 10px;">[39m
+[31m+       [39m
+[31m+     </div>[39m
+[31m+   [39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+   [39m
+
+[36m [2mΓ¥»[22m src/com
+ponents/Analytics.test.ts:
+[2m21:33[22m[39m
+    [90m 19|[39m     
+}[33m;[39m
+    [90m 20|[39m     [3
+4mrenderAnalytics[39m(con
+tainer[33m,[39m 
+mockState)[33m;[39m
+    [90m 21|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'Platform 
+Insights'[39m)[33m;[39m
+    [90m   |[39m        
+                         
+[31m^[39m
+    [90m 22|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'increasing'[39m)[33m;
+[39m
+    [90m 23|[39m   
+})[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[1/4]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/components/Navigation.
+test.ts[2m > 
+[22mNavigation 
+Workflow[2m > 
+[22mrenders routing UI 
+without crashing
+[31m[1mAssertionError[2
+2m: expected '\n    <div 
+class="section-header">\n 
+ΓÇª' to contain 'Smart 
+Route Planner'[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- Smart Route 
+Planner[39m
+[31m+[39m
+[31m+     <div class="sec
+tion-header">[39m
+[31m+       <div>[39m
+[31m+         <h2 class="
+section-title">≡ƒº¡ Smart 
+Navigation</h2>[39m
+[31m+         <p class="s
+ection-desc">AI-optimized 
+routing that avoids 
+congested paths in 
+real-time</p>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+[39m
+[31m+     <div 
+class="grid-2-1">[39m
+[31m+       <!-- Main 
+Navigation Panel -->[39m
+[31m+       <div>[39m
+[31m+         <!-- Route 
+Planner -->[39m
+[31m+         <div 
+class="card" 
+style="margin-bottom: 
+20px;">[39m
+[31m+           <div 
+class="card-header">[39m
+[31m+             <span 
+class="card-title">≡ƒôì 
+Route Planner</span>[39m
+[31m+           
+</div>[39m
+[31m+           <div 
+class="card-body">[39m
+[31m+             <div 
+style="display: flex; 
+gap: 12px; margin-bottom: 
+20px;">[39m
+[31m+               <div 
+style="flex: 1;">[39m
+[31m+                 
+<label style="font-size: 
+12px; color: var(--color-t
+ext-tertiary); display: 
+block; margin-bottom: 
+6px;">FROM</label>[39m
+[31m+                 
+<div class="select-control
+">[39m
+[31m+                   
+<span>≡ƒÄ½</span>[39m
+[31m+                   
+<span>Your Seat ΓÇö 
+Section B, Row 14, Seat 
+23</span>[39m
+[31m+                 
+</div>[39m
+[31m+               
+</div>[39m
+[31m+               <div 
+style="display: flex; 
+align-items: flex-end; 
+padding-bottom: 6px; 
+color: var(--color-text-te
+rtiary); font-size: 
+20px;">ΓåÆ</div>[39m
+[31m+               <div 
+style="flex: 1;">[39m
+[31m+                 
+<label style="font-size: 
+12px; color: var(--color-t
+ext-tertiary); display: 
+block; margin-bottom: 
+6px;">TO</label>[39m
+[31m+                 
+<div 
+class="select-control" 
+id="dest-selector" 
+style="cursor: 
+pointer;">[39m
+[31m+                   
+<span>≡ƒôì</span>[39m
+[31m+                   
+<span>Select 
+destination...</span>[39m
+[31m+                 
+</div>[39m
+[31m+               
+</div>[39m
+[31m+             
+</div>[39m
+[31m+[39m
+[31m+             [39m
+[31m+     <div 
+style="margin-top: 
+8px;">[39m
+[31m+       <div 
+style="font-size: 13px; 
+color: var(--color-text-se
+condary); margin-bottom: 
+12px;">Choose your 
+destination:</div>[39m
+[31m+       [39m
+[31m+         <div 
+style="margin-bottom: 
+16px;">[39m
+[31m+           <div 
+style="font-size: 11px; 
+font-weight: 600; 
+text-transform: 
+uppercase; 
+letter-spacing: 1px; 
+color: var(--color-text-te
+rtiary); margin-bottom: 
+8px;">Food</div>[39m
+[31m+           <div 
+style="display: flex; 
+flex-wrap: wrap; gap: 
+8px;">[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="food-1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒìö Main Food Court[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="food-2" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒìò South Kitchen[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="food-3" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒî« East Snack Bar[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="food-5" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÑ⌐ West Grill House[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       [39m
+[31m+         <div 
+style="margin-bottom: 
+16px;">[39m
+[31m+           <div 
+style="font-size: 11px; 
+font-weight: 600; 
+text-transform: 
+uppercase; 
+letter-spacing: 1px; 
+color: var(--color-text-te
+rtiary); margin-bottom: 
+8px;">Restroom</div>[39m
+[31m+           <div 
+style="display: flex; 
+flex-wrap: wrap; gap: 
+8px;">[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="rest-1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÜ╗ North Restrooms 
+A[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="rest-3" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÜ╗ South Restrooms[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="rest-4" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÜ╗ East Restrooms[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       [39m
+[31m+         <div 
+style="margin-bottom: 
+16px;">[39m
+[31m+           <div 
+style="font-size: 11px; 
+font-weight: 600; 
+text-transform: 
+uppercase; 
+letter-spacing: 1px; 
+color: var(--color-text-te
+rtiary); margin-bottom: 
+8px;">Shopping</div>[39m
+[31m+           <div 
+style="display: flex; 
+flex-wrap: wrap; gap: 
+8px;">[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="merch-1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÅ¬ Official Team 
+Store[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       [39m
+[31m+         <div 
+style="margin-bottom: 
+16px;">[39m
+[31m+           <div 
+style="font-size: 11px; 
+font-weight: 600; 
+text-transform: 
+uppercase; 
+letter-spacing: 1px; 
+color: var(--color-text-te
+rtiary); margin-bottom: 
+8px;">Services</div>[39m
+[31m+           <div 
+style="display: flex; 
+flex-wrap: wrap; gap: 
+8px;">[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="med-1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÅÑ Medical Center[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       [39m
+[31m+         <div 
+style="margin-bottom: 
+16px;">[39m
+[31m+           <div 
+style="font-size: 11px; 
+font-weight: 600; 
+text-transform: 
+uppercase; 
+letter-spacing: 1px; 
+color: var(--color-text-te
+rtiary); margin-bottom: 
+8px;">Exit</div>[39m
+[31m+           <div 
+style="display: flex; 
+flex-wrap: wrap; gap: 
+8px;">[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="gate-s1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÜ¬ Gate S1 (Exit)[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+               
+<button class="btn 
+btn-secondary btn-sm 
+dest-pick-btn" 
+data-dest-id="gate-n1" 
+style="font-size: 
+12px;">[39m
+[31m+                 
+≡ƒÜ¬ Gate N1 (Exit)[39m
+[31m+               
+</button>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       [39m
+[31m+     </div>[39m
+[31m+   [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+[39m
+[31m+         <!-- Route 
+Visualization -->[39m
+[31m+         [39m
+[31m+       </div>[39m
+[31m+[39m
+[31m+       <!-- Quick 
+Destinations Panel 
+-->[39m
+[31m+       <div>[39m
+[31m+         <div 
+class="card" 
+style="margin-bottom: 
+20px;">[39m
+[31m+           <div 
+class="card-header">[39m
+[31m+             <span 
+class="card-title">ΓÜí 
+Quick Navigate</span>[39m
+[31m+           
+</div>[39m
+[31m+           <div 
+class="card-body" 
+style="display: flex; 
+flex-direction: column; 
+gap: 8px;">[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="food-1" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒìö</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">Main Food 
+Court</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Food</div>
+[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">4 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="food-2" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒìò</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">South 
+Kitchen</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Food</div>
+[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">6 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="food-3" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒî«</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">East Snack 
+Bar</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Food</div>
+[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">5 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="food-5" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒÑ⌐</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">West Grill 
+House</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Food</div>
+[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">7 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="rest-1" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒÜ╗</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">North Restrooms 
+A</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Restroom</
+div>[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">3 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="rest-3" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒÜ╗</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">South 
+Restrooms</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Restroom</
+div>[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">5 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="rest-4" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒÜ╗</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">East 
+Restrooms</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Restroom</
+div>[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">4 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+               <div 
+class="nav-quick-dest" 
+data-dest-id="merch-1" 
+style="[39m
+[31m+                 
+display: flex; 
+align-items: center; gap: 
+12px; padding: 10px 
+12px;[39m
+[31m+                 
+background: var(--color-bg
+-secondary); 
+border-radius: 
+var(--radius-md);[39m
+[31m+                 
+cursor: pointer; 
+transition: all 0.15s; 
+border: 1px solid 
+transparent;[39m
+[31m+               " onm
+ouseover="this.style.borde
+rColor='var(--color-border
+-active)'; this.style.back
+ground='rgba(108,92,231,0.
+08)'" onmouseout="this.sty
+le.borderColor='transparen
+t'; this.style.background=
+'var(--color-bg-secondary)
+'">[39m
+[31m+                 
+<span style="font-size: 
+18px;">≡ƒÅ¬</span>[39m
+[31m+                 
+<div style="flex: 
+1;">[39m
+[31m+                   
+<div style="font-size: 
+13px; font-weight: 
+500;">Official Team 
+Store</div>[39m
+[31m+                   
+<div style="font-size: 
+11px; color: var(--color-t
+ext-tertiary);">Shopping</
+div>[39m
+[31m+                 
+</div>[39m
+[31m+                 
+<span style="font-size: 
+12px; color: var(--color-t
+ext-tertiary);">5 
+min</span>[39m
+[31m+               
+</div>[39m
+[31m+             [39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+[39m
+[31m+         <div 
+class="card">[39m
+[31m+           <div 
+class="card-header">[39m
+
+[2m Test Files [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (8)[39m
+[2m   Start at [22m 15:41:37
+[2m   Duration [22m 1.33s[2m (transform 300ms, setup 0ms, import 460ms, tests 344ms, environment 5.48s)[22m
+
+[31m+             <span 
+class="card-title">≡ƒÆí 
+Navigation 
+Tips</span>[39m
+[31m+           
+</div>[39m
+[31m+           <div 
+class="card-body" 
+style="display: flex; 
+flex-direction: column; 
+gap: 10px;">[39m
+[31m+             <div 
+style="padding: 10px; 
+background: rgba(0, 210, 
+160, 0.06); 
+border-radius: 
+var(--radius-sm); 
+border-left: 3px solid var
+(--color-success);">[39m
+[31m+               <div 
+style="font-size: 12px; 
+font-weight: 600; color: v
+ar(--color-success);">Leas
+t Crowded Path</div>[39m
+[31m+               <div 
+style="font-size: 12px; 
+color: var(--color-text-se
+condary); margin-top: 
+2px;">West Concourse 
+currently has 40% less 
+foot traffic than 
+East.</div>[39m
+[31m+             
+</div>[39m
+[31m+             <div 
+style="padding: 10px; 
+background: rgba(251, 
+191, 36, 0.06); 
+border-radius: 
+var(--radius-sm); 
+border-left: 3px solid var
+(--color-warning);">[39m
+[31m+               <div 
+style="font-size: 12px; 
+font-weight: 600; color: v
+ar(--color-warning);">Cong
+estion Alert</div>[39m
+[31m+               <div 
+style="font-size: 12px; 
+color: var(--color-text-se
+condary); margin-top: 
+2px;">North Concourse 
+near Gate N1 is 
+congested. Use 
+alternative 
+routes.</div>[39m
+[31m+             
+</div>[39m
+[31m+             <div 
+style="padding: 10px; 
+background: rgba(0, 206, 
+255, 0.06); 
+border-radius: 
+var(--radius-sm); 
+border-left: 3px solid var
+(--color-accent);">[39m
+[31m+               <div 
+style="font-size: 12px; 
+font-weight: 600; color: v
+ar(--color-accent);">Exit 
+Planning</div>[39m
+[31m+               <div 
+style="font-size: 12px; 
+color: var(--color-text-se
+condary); margin-top: 
+2px;">Gate S1 is 
+recommended for fastest 
+exit after the 
+match.</div>[39m
+[31m+             
+</div>[39m
+[31m+           
+</div>[39m
+[31m+         </div>[39m
+[31m+       </div>[39m
+[31m+     </div>[39m
+[31m+   [39m
+
+[36m [2mΓ¥»[22m src/com
+ponents/Navigation.test.ts
+:[2m31:33[22m[39m
+    [90m 29|[39m
+    [90m 30|[39m     
+[90m// Validate 
+accessibility and 
+layout[39m
+    [90m 31|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'Smart Route 
+Planner'[39m)[33m;[39m
+    [90m   |[39m        
+                         
+[31m^[39m
+    [90m 32|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'From:'[39m)[33m;[39m
+    [90m 33|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'To:'[39m)[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[2/4]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/components/QueueDashbo
+ard.test.ts[2m > 
+[22mQueue Dashboard 
+Tracking[2m > 
+[22mrenders dynamic 
+queue facilities 
+effectively
+[31m[1mTypeError[22m: 
+Cannot read properties of 
+undefined (reading 
+'icon')[39m
+[36m [2mΓ¥»[22m 
+renderRecommendations src/
+components/QueueDashboard.
+ts:[2m162:89[22m[39m
+    [90m160|[39m        
+ <div>
+    [90m161|[39m        
+   <div style="font-size: 
+14px; font-weight: 600; 
+color: var(--ΓÇª
+    [90m162|[39m        
+   <div style="font-size: 
+13px; color: var(--color-t
+ext-secondaΓÇª
+    [90m   |[39m        
+                          
+                          
+                          
+   [31m^[39m
+    [90m163|[39m        
+ </div>
+    [90m164|[39m        
+ <button class="btn 
+btn-sm btn-secondary" 
+style="margin-left: aΓÇª
+[90m [2mΓ¥»[22m 
+renderQueueDashboard src/c
+omponents/QueueDashboard.t
+s:[2m43:11[22m[39m
+[90m [2mΓ¥»[22m src/com
+ponents/QueueDashboard.tes
+t.ts:[2m21:5[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[3/4]ΓÄ»[22m[39m
+
+[41m[1m FAIL [22m[49m 
+src/components/StadiumMap.
+test.ts[2m > 
+[22mStadium Map View 
+Strategy[2m > 
+[22mrenders SVG zones 
+and layout effectively
+[31m[1mAssertionError[2
+2m: expected null not to 
+be null[39m
+[36m [2mΓ¥»[22m src/com
+ponents/StadiumMap.test.ts
+:[2m23:58[22m[39m
+    [90m 21|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'svg'[39m)[33m;[39m
+    [90m 22|[39m     [3
+4mexpect[39m(container[3
+3m.[39minnerHTML)[33m.[
+39m[34mtoContain[39m([3
+2m'Zone 
+A'[39m)[33m;[39m
+    [90m 23|[39m     [3
+4mexpect[39m(container[3
+3m.[39m[34mquerySelector
+[39m([32m'.heatmap-zone'
+[39m))[33m.[39mnot[33m
+.[39m[34mtoBeNull[39m()
+[33m;[39m
+    [90m   |[39m        
+                          
+                        
+[31m^[39m
+    [90m 24|[39m   
+})[33m;[39m
+    [90m 25|[39m 
+})[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ
+»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[4/4]ΓÄ»[22m[39m
 
